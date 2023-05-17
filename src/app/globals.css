@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Colours ===== */
+:root {
+  --body-color: #e4e9f7;
+  --nav-color: #8a10a6;
+  --side-nav: rgba(116, 118, 120, 0.861);
+  --text-color: #fff;
+  --search-bar: #f2f2f2;
+  --search-text: #010718;
+}
+
+/* body {
+  background-color: var(--body-color);
+} */
+/* body { */
+/* background-color: #000000; */
+/* background: repeating-linear-gradient(
+      45deg,
+      #2b2b2b 0%,
+      #2b2b2b 10%,
+      #222222 0%,
+      #222222 50%
+    )
+    0 / 15px 15px; */
+/* } */
+
+::selection {
+  color: rgb(13, 0, 255);
+  font-style: italic;
+  font-weight: bold;
+  background: rgb(109, 52, 101);
+}
+#feedback {
+  background-image: url("../../public/imgd.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#admissionsback {
+  background-image: url("../../public/admissionsback.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* ============================ Go - On - Top Start================================== */
+
+#go {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+}
+#go:hover {
+  border-radius: 50%;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.34),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================ Go - On - Top End================================== */
+
+/* ============================ Neon - Button - Start ================================== */
+.mynavback {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #383231 0%,
+    #750333 25%,
+    #5a1a74 50%,
+    #575d64 75%,
+    #383231 100%
+  );
+}
+.ball {
+  background-image: radial-gradient(ellipse at center, red 0%, blue 100%);
+  border-radius: 50%;
+}
+.bouncy-castle {
+  height: 100px;
+  left: 55%;
+  position: absolute;
+}
+.bouncy-castle .ball {
+  -webkit-animation-direction: alternate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: bounce;
+  -webkit-animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  margin-left: -100px;
+  position: absolute;
+}
+@-webkit-keyframes bounce {
+  from {
+    bottom: 20px;
+  }
+
+  to {
+    bottom: 100%;
+  }
+}
+@keyframes bounce {
+  from {
+    bottom: 20px;
+  }
+
+  to {
+    bottom: 100%;
+  }
+}
+#myneona {
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin: 20px 40px;
+  padding: 17px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  /* background-image: linear-gradient(to bottom right, #b6fbff, #83a4d4); */
+  box-shadow: 0 0 5px #f403d8, 0 0 25px #be1515, 0 0 50px #f403d8;
+  color: red;
+}
+
+/* ============================ 3D - Image - Effect - Start ================================== */
+
+.design {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.design > *,
+.blend > * {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+#rotateBorder {
+  border-left: 15px #20b34a solid;
+  border-right: 15px #20b34a solid;
+  border-top: 15px #e36622 solid;
+  border-bottom: 15px #e36622 solid;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px #eb311f, inset 0 0 20px #ff0000;
+  border-radius: 50px;
+}
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.blend {
+  mix-blend-mode: multiply;
+}
+.blend:hover {
+  mix-blend-mode: hue;
+  transition: all 1s ease-in-out;
+}
+.balaimg {
+  object-fit: cover;
+  border-radius: 50px;
+}
+.design:hover > .balaimg {
+  box-shadow: 0 0 50px #bac3c3;
+  transition: all 1s ease-in;
+}
+.maindiva {
+  position: absolute;
+}
+.maindiva .design {
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-name: balabounce;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+@keyframes balabounce {
+  from {
+    bottom: 20px;
+  }
+  to {
+    bottom: 100%;
+    box-shadow: 0 0 50px #bac3c3;
+    border-radius: 50px;
+  }
+}
+
+/* ============================ 3D - Image - Effect - End ================================== */
+/* ============================ Neon - Text - Start ================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap");
+.neon {
+  padding-left: 15px;
+  color: #fb4264;
+  line-height: 7vw;
+  text-shadow: 0 0 3vw #f40a35;
+  /* letter-spacing: 0.1em; */
+  font-weight: bolder;
+  /* font-family: "Open Sans", sans-serif; */
+  letter-spacing: 0rem;
+}
+.flux {
+  padding-left: 15px;
+  color: #426dfb;
+  line-height: 7vw;
+  text-shadow: 0 0 3vw #2356ff;
+  /* letter-spacing: 0.1em; */
+  font-weight: bolder;
+  /* font-family: "Open Sans", sans-serif; */
+  letter-spacing: 0rem;
+}
+.neon {
+  animation: neon 3.7s ease infinite;
+}
+@keyframes neon {
+  0%,
+  100% {
+    color: #ffffff;
+  }
+  10% {
+    color: #20a5de;
+  }
+}
+.flux {
+  animation: flux 4s linear infinite;
+}
+@keyframes flux {
+  0%,
+  100% {
+    color: #ffffff;
+  }
+  50% {
+    color: #a72ca7;
+  }
+}
+
+/* ============================ Neon - Text - End ================================== */
+
